@@ -26,7 +26,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome-Books] <a name="about-project"></a>
+# 📖 [To-Do-App] <a name="about-project"></a>
 
 > To Do App . 
 
@@ -64,9 +64,9 @@ to drag and drop the task).
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Here is a link to the demo project.
+> N/A.
 
-- [Live Demo Link](https://ahmed025566.github.io/Awesome_Books-ES6/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,7 +86,7 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
-    https://github.com/ahmed025566/Awesome-Books.git
+    https://github.com/ahmed025566/To-Do-App.git
 ### Install
 
 Install this project with:

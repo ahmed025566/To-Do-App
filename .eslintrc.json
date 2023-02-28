@@ -21,6 +21,7 @@
     "ignorePatterns": [
       "dist/",
       "build/",
+      "functions.js",
       "webpack.config.js"
     ]
   }

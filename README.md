@@ -56,7 +56,8 @@ to drag and drop the task).
 
 - It has a nice list of tasks that was added dynamicly using javascript.
 - every task is an input filed that have an atrbiute readonly, will have a cool future to edit in the future.
-
+- you can edit the task.
+- you can delete the task.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,8 +130,6 @@ You can deploy this project using:
 > The following are the future features that will be added to the project.
 
 - [ ] **[Iw-will-has-a-function-to-remove-completed-task]**
-- [ ] **[Iw-will-has-a-function-to-delete-the-task]**
-- [ ] **[Iw-will-has-a-function-to-edit-the-task]**
 - [ ] **[Iw-will-has-a-function-to-drag-and-drop-the-task]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

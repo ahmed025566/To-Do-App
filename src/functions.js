@@ -3,7 +3,7 @@ const input = document.querySelector(".add");
 
 const addToLocalStorage = (tasks) => {
   for (let i = 0, j = 1; i < tasks.length; i++, j++) {
-    tasks[i].index = j;
+    tasks[i].IDX = j;
   }
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
@@ -17,10 +17,9 @@ const getFromLocalStorage = () => {
 };
 let tasks = getFromLocalStorage();
 const deleteTaskWith = (taskId) => {
-   tasks = tasks.filter((task) => task.id != taskId);
-   console.log(tasks);
-   addToLocalStorage(tasks);
-}
+  tasks = tasks.filter((task) => task.id != taskId);
+  addToLocalStorage(tasks);
+};
 export const displayTasks = () => {
   tasksDiv.innerHTML = "";
   tasks.forEach((task) => {
@@ -49,7 +48,7 @@ export const addTask = () => {
   if (input.value !== "") {
     const id = Date.now();
     const task = {
-      index: tasks.length,
+      IDX: tasks.length,
       description: input.value,
       complete: false,
       id,
@@ -74,12 +73,13 @@ tasksDiv.addEventListener("click", (e) => {
       }
     }
   }
-  if(e.target.classList.contains("remove")) {
-    deleteTaskWith(e.target.parentElement.parentElement.getAttribute("data-id"));
+  if (e.target.classList.contains("remove")) {
+    deleteTaskWith(
+      e.target.parentElement.parentElement.getAttribute("data-id")
+    );
     e.target.parentElement.parentElement.remove();
   }
-  
-  
+
   if (e.target.classList.contains("text")) {
     for (let i = 0; i < tasksDiv.childNodes.length; i++) {
       if (
@@ -116,4 +116,3 @@ tasksDiv.addEventListener("input", (e) => {
     }
   }
 });
-

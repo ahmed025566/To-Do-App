@@ -59,7 +59,17 @@ export const addTask = () => {
   displayTasks();
   addToLocalStorage(tasks);
 };
+export const remove = () => {
+  tasksDiv.addEventListener("click", (e) =>{
+    if (e.target.classList.contains("remove")) {
+      e.target.parentElement.parentElement.remove();
+      deleteTaskWith(
+        e.target.parentElement.parentElement.getAttribute("data-id")
+      );
+    }
+  })
 
+}
 tasksDiv.addEventListener("click", (e) => {
   if (e.target.classList.contains("text")) {
     const parent = e.target.parentElement;
@@ -73,12 +83,7 @@ tasksDiv.addEventListener("click", (e) => {
       }
     }
   }
-  if (e.target.classList.contains("remove")) {
-    e.target.parentElement.parentElement.remove();
-    deleteTaskWith(
-      e.target.parentElement.parentElement.getAttribute("data-id")
-    );
-  }
+  
 
   if (e.target.classList.contains("text")) {
     for (let i = 0; i < tasksDiv.childNodes.length; i++) {
@@ -95,6 +100,8 @@ tasksDiv.addEventListener("click", (e) => {
     }
   }
 });
+
+// unclick out side the task 
 document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("text")) {
     for (let i = 0; i < tasksDiv.childNodes.length; i++) {
@@ -106,6 +113,8 @@ document.addEventListener("click", (e) => {
     }
   }
 });
+
+// saving changes whenever inpit in the task text.
 tasksDiv.addEventListener("input", (e) => {
   if (e.target.classList.contains("text")) {
     for (let i = 0; i < tasks.length; i++) {

@@ -1,5 +1,5 @@
 import './style.css';
-import { addTask, displayTasks , UI } from './functions.js';
+import { addTask, displayTasks, remove } from './functions.js';
 
 const submit = document.querySelector('.submit');
 submit.addEventListener('click', (e) => {
@@ -7,8 +7,7 @@ submit.addEventListener('click', (e) => {
   addTask();
 });
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   displayTasks();
- 
-  
+  remove();
 });

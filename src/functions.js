@@ -7,7 +7,10 @@ const addToLocalStorage = (tasks) => {
   }
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
-
+const deleteTaskWith = (taskId) => {
+  tasks = tasks.filter((task) => task.id != taskId);
+  addToLocalStorage(tasks);
+}
 const getFromLocalStorage = () => {
   const storage =
     localStorage.getItem("tasks") === null
@@ -16,10 +19,7 @@ const getFromLocalStorage = () => {
   return storage;
 };
 let tasks = getFromLocalStorage();
-const deleteTaskWith = (taskId) => {
-  tasks = tasks.filter((task) => task.id != taskId);
-  addToLocalStorage(tasks);
-};
+
 export const displayTasks = () => {
   tasksDiv.innerHTML = "";
   tasks.forEach((task) => {
@@ -74,10 +74,10 @@ tasksDiv.addEventListener("click", (e) => {
     }
   }
   if (e.target.classList.contains("remove")) {
+    e.target.parentElement.parentElement.remove();
     deleteTaskWith(
       e.target.parentElement.parentElement.getAttribute("data-id")
     );
-    e.target.parentElement.parentElement.remove();
   }
 
   if (e.target.classList.contains("text")) {

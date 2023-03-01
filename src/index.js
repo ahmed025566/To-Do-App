@@ -1,9 +1,14 @@
 import './style.css';
-import { addTask, displayTasks } from './functions.js';
+import { addTask, displayTasks , UI } from './functions.js';
 
 const submit = document.querySelector('.submit');
 submit.addEventListener('click', (e) => {
   e.preventDefault();
   addTask();
 });
-window.onload = displayTasks();
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayTasks();
+ 
+  
+});

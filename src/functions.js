@@ -17,7 +17,13 @@ const getFromLocalStorage = () => {
 };
 let tasks = getFromLocalStorage();
 const deleteTask = (taskID) => {
-  tasks = tasks.filter((task) => task.id !== +taskID);
+   
+  for(let i = 0 ; i < tasks.length; i++) {
+    if(tasks[i].id == taskID) {
+          tasks.splice(tasks[i], 1)
+    }
+  }
+  
 
   addToLocalStorage(tasks);
 };
@@ -122,4 +128,4 @@ tasksDiv.addEventListener("input", (e) => {
     }
   }
 });
-console.log(tasks);
+

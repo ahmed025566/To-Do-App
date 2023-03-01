@@ -65,9 +65,14 @@ body {
   cursor: pointer;
 }
 
+.submit:hover {
+  border: 1.5px solid #454544;
+}
+
 .to-do-list {
   width: 100%;
-  min-height: 240px;
+  height: 240px;
+  overflow-y: scroll;
   border-bottom: 1.5px solid #d3d3d3;
 }
 
@@ -76,7 +81,6 @@ body {
   height: 60px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
   border-bottom: 1.5px solid #d3d3d3;
 }
 
@@ -85,7 +89,7 @@ body {
   height: 97%;
   border: none;
   margin-left: 10px;
-  margin-left: -120px;
+  margin-left: -20px;
   font-size: 25px;
   color: #454544;
 }
@@ -122,10 +126,25 @@ body {
   text-align: center;
   font-size: 25px;
   color: #808080;
+  cursor: pointer;
+}
+
+.clear a:hover {
+  color: #454544;
+  text-decoration: underline;
 }
 
 .drag {
-  width: 20px;
+  width: 80px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #808080;
   cursor: move;
+  font-size: 25px;
+}
+
+.remove {
+  cursor: pointer;
 }

@@ -16,17 +16,11 @@ const getFromLocalStorage = () => {
   return storage;
 };
 let tasks = getFromLocalStorage();
-const deleteTask = (taskID) => {
-   
-  for(let i = 0 ; i < tasks.length; i++) {
-    if(tasks[i].id == taskID) {
-          tasks.splice(tasks[i], 1)
-    }
-  }
-  
-
-  addToLocalStorage(tasks);
-};
+const deleteTaskWith = (taskId) => {
+   tasks = tasks.filter((task) => task.id != taskId);
+   console.log(tasks);
+   addToLocalStorage(tasks);
+}
 export const displayTasks = () => {
   tasksDiv.innerHTML = "";
   tasks.forEach((task) => {
@@ -81,17 +75,11 @@ tasksDiv.addEventListener("click", (e) => {
     }
   }
   if(e.target.classList.contains("remove")) {
-    deleteTask(e.target.parentElement.parentElement.getAttribute("data-id"));
+    deleteTaskWith(e.target.parentElement.parentElement.getAttribute("data-id"));
     e.target.parentElement.parentElement.remove();
   }
-  if (e.target.classList.contains("drag")) {
-    if (e.target.innerHTML == `<i class="fa-solid fa-trash-can"></i>`) {
-      e.target.style.cursor = "pointer";
-      deleteTask(e.target.parentElement.getAttribute("data-id"));
-      e.target.parentElement.remove();
-      
-    }
-  }
+  
+  
   if (e.target.classList.contains("text")) {
     for (let i = 0; i < tasksDiv.childNodes.length; i++) {
       if (

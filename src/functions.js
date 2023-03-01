@@ -2,9 +2,9 @@ const tasksDiv = document.querySelector(".to-do-list");
 const input = document.querySelector(".add");
 
 const addToLocalStorage = (tasks) => {
-    for(let i = 0; i < tasks.length; i++) {
-        tasks[i].index = i;
-    }
+  for (let i = 0, j = 1; i < tasks.length; i++, j++) {
+    tasks[i].index = j;
+  }
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
@@ -17,10 +17,10 @@ const getFromLocalStorage = () => {
 };
 let tasks = getFromLocalStorage();
 const deleteTask = (taskID) => {
-    tasks = tasks.filter((task) => task.id !== +taskID);
+  tasks = tasks.filter((task) => task.id !== +taskID);
 
-    addToLocalStorage(tasks);
-  }
+  addToLocalStorage(tasks);
+};
 export const displayTasks = () => {
   tasksDiv.innerHTML = "";
   tasks.forEach((task) => {
@@ -52,7 +52,7 @@ export const addTask = () => {
       index: tasks.length,
       description: input.value,
       complete: false,
-      id
+      id,
     };
     tasks.push(task);
     input.value = "";
@@ -64,7 +64,7 @@ export const addTask = () => {
 tasksDiv.addEventListener("click", (e) => {
   if (e.target.classList.contains("text")) {
     const parent = e.target.parentElement;
-    parent.lastChild.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
+    parent.lastChild.innerHTML = `<i class="fa-solid fa-trash-can remove"></i>`;
     e.target.removeAttribute("readonly");
     e.target.parentElement.style.background = "#FFF9A6";
     e.target.style.background = "#FFF9A6";
@@ -74,11 +74,16 @@ tasksDiv.addEventListener("click", (e) => {
       }
     }
   }
+  if(e.target.classList.contains("remove")) {
+    deleteTask(e.target.parentElement.parentElement.getAttribute("data-id"));
+    e.target.parentElement.parentElement.remove();
+  }
   if (e.target.classList.contains("drag")) {
     if (e.target.innerHTML == `<i class="fa-solid fa-trash-can"></i>`) {
-        e.target.style.cursor = "pointer";
+      e.target.style.cursor = "pointer";
       deleteTask(e.target.parentElement.getAttribute("data-id"));
       e.target.parentElement.remove();
+      
     }
   }
   if (e.target.classList.contains("text")) {
@@ -96,17 +101,17 @@ tasksDiv.addEventListener("click", (e) => {
     }
   }
 });
-document.addEventListener('click', (e) => {
-    if(!e.target.classList.contains("text")) {
-        for(let i = 0; i < tasksDiv.childNodes.length; i++) {
-            tasksDiv.childNodes[i].style.background = "#fff";
-            tasksDiv.childNodes[i].childNodes[1].style.background = "#fff";
-            tasksDiv.childNodes[
-              i
-            ].childNodes[2].innerHTML = `<i class="fa-solid fa-ellipsis-vertical"></i>`;
-        }
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("text")) {
+    for (let i = 0; i < tasksDiv.childNodes.length; i++) {
+      tasksDiv.childNodes[i].style.background = "#fff";
+      tasksDiv.childNodes[i].childNodes[1].style.background = "#fff";
+      tasksDiv.childNodes[
+        i
+      ].childNodes[2].innerHTML = `<i class="fa-solid fa-ellipsis-vertical"></i>`;
     }
-})
+  }
+});
 tasksDiv.addEventListener("input", (e) => {
   if (e.target.classList.contains("text")) {
     for (let i = 0; i < tasks.length; i++) {
@@ -117,3 +122,4 @@ tasksDiv.addEventListener("input", (e) => {
     }
   }
 });
+console.log(tasks);

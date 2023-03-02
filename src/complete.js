@@ -1,4 +1,4 @@
-import { tasks, addToLocalStorage, displayTasks } from './functions.js';
+import { tasks, addToLocalStorage } from './functions.js';
 
 const tasksDiv = document.querySelector('.to-do-list');
 

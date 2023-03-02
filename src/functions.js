@@ -1,5 +1,6 @@
 const tasksDiv = document.querySelector(".to-do-list");
 const input = document.querySelector(".add");
+const clear = document.getElementById('clear-all');
 
 export const addToLocalStorage = (tasks) => {
   for (let i = 0, j = 1; i < tasks.length; i++, j++) {
@@ -130,3 +131,13 @@ tasksDiv.addEventListener("input", (e) => {
 
 
 
+export const clearAllCompleted = () => {
+  clear.addEventListener('click', () => {
+    
+   tasks = tasks.filter((element) => !element.complete);
+   
+    addToLocalStorage(tasks);
+    displayTasks(tasks);
+   
+  });
+};

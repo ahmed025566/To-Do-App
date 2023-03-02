@@ -1,7 +1,6 @@
 import { tasks, addToLocalStorage, displayTasks } from './functions.js';
 
 const tasksDiv = document.querySelector('.to-do-list');
-const clear = document.getElementById('clear-all');
 
 export const complete = () => {
   tasksDiv.addEventListener('click', (e) => {
@@ -35,20 +34,4 @@ export const complete = () => {
   });
 };
 
-export const clearAllCompleted = () => {
-  clear.addEventListener('click', () => {
-    for (let i = 0; i < tasks.length; i += 1) {
-      if (tasks[i].complete) {
-        tasks.splice(i, 1);
-      }
-    }
-    for (let i = 0; i < tasks.length; i += 1) {
-      if (tasks[i].complete) {
-        tasks.splice(i, 1);
-      }
-    }
 
-    addToLocalStorage(tasks);
-    displayTasks(tasks);
-  });
-};

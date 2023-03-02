@@ -61,7 +61,7 @@ to drag and drop the task).
 - you can mark the task as completed and undo and you are able to clear all the completed from the lower button.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+<!-- LIVE DEMO --> 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 

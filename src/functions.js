@@ -1,16 +1,18 @@
 const tasksDiv = document.querySelector(".to-do-list");
 const input = document.querySelector(".add");
 
-const addToLocalStorage = (tasks) => {
+export const addToLocalStorage = (tasks) => {
   for (let i = 0, j = 1; i < tasks.length; i++, j++) {
     tasks[i].IDX = j;
   }
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
+
 const deleteTaskWith = (taskId) => {
   tasks = tasks.filter((task) => task.id != taskId);
   addToLocalStorage(tasks);
-}
+};
+
 const getFromLocalStorage = () => {
   const storage =
     localStorage.getItem("tasks") === null
@@ -18,7 +20,7 @@ const getFromLocalStorage = () => {
       : JSON.parse(localStorage.getItem("tasks"));
   return storage;
 };
-let tasks = getFromLocalStorage();
+export let tasks = getFromLocalStorage();
 
 export const displayTasks = () => {
   tasksDiv.innerHTML = "";
@@ -27,8 +29,8 @@ export const displayTasks = () => {
     div.className = "task";
     div.setAttribute("data-id", task.id);
     const check = document.createElement("span");
-    check.className = "check";
-    check.innerHTML = '<i class="fa-regular fa-square"></i>';
+    check.className = "make-complete";
+    check.innerHTML = '<i class="fa-regular fa-square complete"></i>';
     div.append(check);
     const taskText = document.createElement("input");
     taskText.className = "text";
@@ -59,17 +61,18 @@ export const addTask = () => {
   displayTasks();
   addToLocalStorage(tasks);
 };
+
 export const remove = () => {
-  tasksDiv.addEventListener("click", (e) =>{
+  tasksDiv.addEventListener("click", (e) => {
     if (e.target.classList.contains("remove")) {
       e.target.parentElement.parentElement.remove();
       deleteTaskWith(
         e.target.parentElement.parentElement.getAttribute("data-id")
       );
     }
-  })
+  });
+};
 
-}
 tasksDiv.addEventListener("click", (e) => {
   if (e.target.classList.contains("text")) {
     const parent = e.target.parentElement;
@@ -83,7 +86,6 @@ tasksDiv.addEventListener("click", (e) => {
       }
     }
   }
-  
 
   if (e.target.classList.contains("text")) {
     for (let i = 0; i < tasksDiv.childNodes.length; i++) {
@@ -93,15 +95,13 @@ tasksDiv.addEventListener("click", (e) => {
       ) {
         tasksDiv.childNodes[i].style.background = "#fff";
         tasksDiv.childNodes[i].childNodes[1].style.background = "#fff";
-        tasksDiv.childNodes[
-          i
-        ].childNodes[2].innerHTML = `<i class="fa-solid fa-ellipsis-vertical"></i>`;
+        tasksDiv.childNodes[i].childNodes[2].innerHTML = `<i class="fa-solid fa-ellipsis-vertical"></i>`;
       }
     }
   }
 });
 
-// unclick out side the task 
+// unclick out side the task
 document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("text")) {
     for (let i = 0; i < tasksDiv.childNodes.length; i++) {
@@ -125,3 +125,8 @@ tasksDiv.addEventListener("input", (e) => {
     }
   }
 });
+
+
+
+
+

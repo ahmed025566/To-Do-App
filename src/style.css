@@ -94,21 +94,19 @@ body {
   color: #454544;
 }
 
-.check {
+.make-complete {
   display: flex;
   align-items: center;
-  width: 30px;
   height: 100%;
   justify-content: center;
+  cursor: pointer;
+  width: 70px;
 }
 
-.check i {
-  display: inline-block;
-  width: 30%;
-  height: 40%;
-  font-size: 20px;
-  margin-left: 15px;
+.make-complete i {
+  font-size: 25px;
   color: #808080;
+  cursor: none;
 }
 
 .clear {

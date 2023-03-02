@@ -58,7 +58,7 @@ to drag and drop the task).
 - every task is an input filed that have an atrbiute readonly, will have a cool future to edit in the future.
 - you can edit the task.
 - you can delete the task.
-
+- you can mark the task as completed and undo and you are able to clear all the completed from the lower button.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -129,7 +129,7 @@ You can deploy this project using:
 
 > The following are the future features that will be added to the project.
 
-- [ ] **[Iw-will-has-a-function-to-remove-completed-task]**
+
 - [ ] **[Iw-will-has-a-function-to-drag-and-drop-the-task]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -65,8 +65,9 @@ to drag and drop the task).
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> N/A.
+> Here is a link to the demo project.
 
+- [Live Demo Link](https://ahmed025566.github.io/To-Do-App/dist/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

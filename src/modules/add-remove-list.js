@@ -93,8 +93,6 @@ export const renderList = () => {
   });
 };
 
-
-
 export const clearCompleted = () => {
   clearSelected();
   clearList();

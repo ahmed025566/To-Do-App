@@ -21,8 +21,7 @@
     "ignorePatterns": [
       "dist/",
       "build/",
-      "functions.js",
-      "complete.js",
+      "edit-update-clear.test.js",
       "webpack.config.js"
     ]
   }

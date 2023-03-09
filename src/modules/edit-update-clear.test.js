@@ -1,5 +1,6 @@
-
-
+/**
+ * @jest-environment jsdom
+ */
 import { renameListItem, clearSelected } from './add-remove-list.js';
 import { updateCompletedV2 } from './update.js';
 

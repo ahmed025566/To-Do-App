@@ -2,32 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do App</title>
-    <script
-      src="https://kit.fontawesome.com/722afd38e8.js"
-      crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8c5a2b9118.js" crossorigin="anonymous"></script>
+    <title>To Do List</title>
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <p>Today's To Do</p>
-        <span class="referesh"><i class="fa-solid fa-arrows-rotate"></i></span>
-    </header>
-    <form class="add-form">
-        <input type="text" class="add" placeholder="Add to your list ...">
-        <button type="submit" class="submit"><i class="fa-solid fa-arrow-left-long"></i></button>
-    </form>
- <div class="to-do-list">
-
- </div>
- <div class="clear"><a id="clear-all">Clear all completed</a></div>
- 
-   
-
-</div>
-    <script src="index.js"></script>
-    
+  <div class="container">
+    <div class="title-text">
+      <h2>To Do List</h2>
+    </div>
+    <div class="list">
+      <form>
+        <input id="add-input" placeholder="add to list..." type="text">
+        <button id="add-button" type="button">Add</button>
+      </form>
+      <ul id="list-container">
+      </ul>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="clear-completed">Clear all completed</button>
+    </div>
+  </div>
 </body>
 </html>

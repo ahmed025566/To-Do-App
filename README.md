@@ -1,7 +1,5 @@
 <a name="readme-top"></a>
 
-
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -28,9 +26,9 @@
 
 # 📖 [To-Do-App] <a name="about-project"></a>
 
-> To Do App . 
+> To Do App .
 
-**[To-Do-App]** is a to do list app that will have a lot of cool futures e.g(edit the task after adding, 
+**[To-Do-App]** is a to do list app that will have a lot of cool futures e.g(edit the task after adding,
 to drag and drop the task).
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -59,9 +57,10 @@ to drag and drop the task).
 - you can edit the task.
 - you can delete the task.
 - you can mark the task as completed and undo and you are able to clear all the completed from the lower button.
+- Add Test functionality features
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO --> 
+<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -69,47 +68,45 @@ to drag and drop the task).
 
 - [Live Demo Link](https://ahmed025566.github.io/To-Do-App/dist/)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
-    A web browser
+A web browser
 
 ### Setup
 
 Clone this repository to your desired folder:
-    https://github.com/ahmed025566/To-Do-App.git
+https://github.com/ahmed025566/To-Do-App.git
+
 ### Install
 
 Install this project with:
-    gitBash
+gitBash
 
 ### Usage
 
 To run the project, execute the following command:
-    Press the Go Live button 
+Press the Go Live button
 
 ### Run tests
 
 To run tests, run the following command:
-    Press the Go Live button 
+Press the Go Live button
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Deployment
 
 You can deploy this project using:
-    Using Github Pages
+Using Github Pages
 
 <!-- AUTHORS -->
 
@@ -123,13 +120,11 @@ You can deploy this project using:
 - Twitter: [@AhmedEl18692792](https://twitter.com/AhmedEl18692792)
 - LinkedIn: [Ahmed Salah](https://www.linkedin.com/in/ahmed-salah025566)
 
-
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 > The following are the future features that will be added to the project.
-
 
 - [ ] **[Iw-will-has-a-function-to-drag-and-drop-the-task]**
 
@@ -149,8 +144,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
-
 If you like this project you can buy me a coffee UwU
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -158,8 +151,6 @@ If you like this project you can buy me a coffee UwU
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-
 
 I would like to thank those who've motivated me to not give up, and also I would like to thank Microverse for this great opportunity.
 

@@ -5,8 +5,8 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    functions: './src/functions.js',
-    complete: './src/complete.js'
+    add_remove: './src/modules/add-remove-list.js',
+    update: './src/modules/update.js'
   },
   devtool: 'inline-source-map',
   devServer: {

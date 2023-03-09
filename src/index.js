@@ -1,18 +1,18 @@
 import './style.css';
-import {
-  addTask, displayTasks, remove, clearAllCompleted,
-} from './functions.js';
-import { complete } from './complete.js';
+import { renderList, addToList, clearCompleted } from './modules/add-remove-list.js';
 
-const submit = document.querySelector('.submit');
-submit.addEventListener('click', (e) => {
-  e.preventDefault();
-  addTask();
+renderList();
+
+// EVENT LISTENERS
+const addBtn = document.getElementById('add-button');
+addBtn.addEventListener('click', () => {
+  const input = document.getElementById('add-input');
+  if (input.value) {
+    addToList(input.value);
+    input.value = '';
+    input.focus();
+  }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  displayTasks();
-  remove();
-  clearAllCompleted();
-  complete();
-});
+const clearBtn = document.querySelector('.clear-completed');
+clearBtn.addEventListener('click', () => clearCompleted());

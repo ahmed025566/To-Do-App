@@ -58,6 +58,8 @@ to drag and drop the task).
 - you can delete the task.
 - you can mark the task as completed and undo and you are able to clear all the completed from the lower button.
 - Add Test functionality features
+- Edit Test functionality feature
+- Clear All Test functionality feature
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->

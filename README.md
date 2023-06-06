@@ -16,7 +16,7 @@ REQUIRED SECTIONS:
 -->
 
 <div align="center">
-  <h1><b>Math Magicians</b></h1>
+  <h1><b>To Do App</b></h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -41,9 +41,9 @@ REQUIRED SECTIONS:
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math magicians <a name="about-project"></a>
+# 📖 To Do App <a name="about-project"></a>
 
-**Math magicians** 
+**To Do App** 
 
 To do app is a cool project in which you can add a new task and you can edit the task even after adding it 
 and you can remove it.

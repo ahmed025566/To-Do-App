@@ -23,6 +23,9 @@
       "build/",
       "App.js",
       "index.js",
-      "App.test.js"
+      "App.test.js",
+      "Todo.js",
+      "TodoForm.js",
+      "TodoList.js"
     ]
   }
